@@ -1,12 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+
+
+const Header = () => {
+
+  return(
+    <View style={styles.header}>
+    <Text style= {{ fontWeight:'bold', fontSize:50, margin:50}}>CityPop</Text>
+  </View>
+  )
+}
+
+
+ 
+const ButtonChoose = () => {
+  return(
+    <View style={{flexDirection:'column', justifyContent:'space-between', padding:70}}>
+
+    <TouchableOpacity
+      style={styles.button}
+      >
+        <Text>SEARCH BY CITY</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+      style={styles.button}>
+      <Text>SEARCH BY COUNTRY</Text>
+      </TouchableOpacity>
+  </View>
+  )
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Header/>
+      <ButtonChoose/>
     </View>
   );
 }
@@ -16,6 +45,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
   },
+  button: {
+    alignItems : "center",
+    padding:20,
+    borderColor:"#000000",
+    backgroundColor:"#DDDDDD",
+    margin:5,
+    width:300,
+  },
+  header: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    margin: 40,
+    fontSize: 40,
+  }
 });
