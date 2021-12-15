@@ -1,10 +1,14 @@
+import React from 'react';
 import {StyleSheet } from 'react-native';
 import NavigateScreen from './Navigation/navigation';
+
 
 const App = () => {
 
   return (
-    <NavigateScreen/>
+    <>
+    {NavigateScreen}
+    </>
   )
 }
 

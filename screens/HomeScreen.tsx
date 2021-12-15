@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
+
 interface SelectOptionScreen {
 
   navigation : any
@@ -21,9 +22,6 @@ const Header = () => {
 */
 
 const OptionsSelection = (props:SelectOptionScreen) => {
-//const navigation = useNavigation()
-
-
 
 return(
   <View style={{flexDirection:'column', justifyContent:'space-between', padding:70}}>
